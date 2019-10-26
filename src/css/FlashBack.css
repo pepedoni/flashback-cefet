@@ -1,3 +1,36 @@
 .menu-item {
   margin: 5px !important;
 }
+
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  background-color: #232a50 !important;
+}
+
+.MuiLinearProgress-colorSecondary {
+  background-color: rgb(158, 171, 251) !important;
+}
+
+.MuiLinearProgress-root {
+  margin-top: 20px;
+  height: 16px !important;
+}
+
+.MuiLinearProgress-barColorSecondary{
+  background-color: #4300f5 !important;
+}
+
+.menu-item {
+  box-shadow: #000000 2px 2px;
+  cursor: pointer;
+  margin: 10px;
+  border: solid #031c23 1px;
+  padding: 5px;
+  border-radius: 30px;
+  width: 50px;
+  text-align: center;
+}
+
+.MuiAppBar-root {
+  align-items: flex-end;
+}

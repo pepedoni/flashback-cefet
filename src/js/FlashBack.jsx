@@ -3,7 +3,7 @@ import '../css/FlashBack.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import {Phone, Info, Room} from '@material-ui/icons';
+import { Phone, Info, Room } from '@material-ui/icons';
 import CountDown from './CountDown';
 import PartyMap from './PartyMap';
 import PricesCard from './PricesCard';
