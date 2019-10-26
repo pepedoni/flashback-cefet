@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.MuiLinearProgress-colorSecondary {
+  background-color: rgb(158, 171, 251) !important;
+}
+
+.MuiLinearProgress-root {
+  margin-top: 20px;
+  height: 16px !important;
+}
+
+.MuiLinearProgress-barColorSecondary{
+  background-color: #4300f5 !important;
+}
