@@ -14,7 +14,7 @@ code {
 
 .MuiAppBar-colorPrimary {
   color: #fff;
-  background-color: #232a50 !important;
+  background-color: #000 !important;
 }
 
 .MuiLinearProgress-colorSecondary {
@@ -43,4 +43,31 @@ code {
 
 .MuiAppBar-root {
   align-items: flex-end;
+}
+
+.makeStyles-title-82 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.MuiCardActions-root {
+  justify-content: center;
+}
+
+a:link {
+  color:#000000;
+  text-decoration:none;
+}
+a:visited {
+  color:#000000;
+  text-decoration:none;
+}
+a:hover {
+  color:#000000;
+  text-decoration:none;
+}
+a:active {
+  color:#000000;
+  text-decoration:none;
 }

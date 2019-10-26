@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {Phone, Info, Room} from '@material-ui/icons';
 import CountDown from './CountDown';
+import PartyMap from './PartyMap';
+import PricesCard from './PricesCard';
 
 export default class FlaskBack extends React.Component  {
 
@@ -25,6 +27,8 @@ export default class FlaskBack extends React.Component  {
           </Toolbar>
         </AppBar>
         <CountDown/>
+        <PricesCard/>
+        <PartyMap/>
       </div>
     );
   }
