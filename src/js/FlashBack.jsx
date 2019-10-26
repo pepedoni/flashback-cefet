@@ -3,6 +3,7 @@ import '../css/FlashBack.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import {Phone, Info, Room} from '@material-ui/icons';
 import CountDown from './CountDown';
 
 export default class FlaskBack extends React.Component  {
@@ -13,10 +14,13 @@ export default class FlaskBack extends React.Component  {
         <AppBar position="static">
           <Toolbar>
             <Typography className="menu-item" variant="h4">
-              Atrações
+              <Room/>
             </Typography>
             <Typography className="menu-item" variant="h4">
-              Contatos
+              <Info/>
+            </Typography>
+            <Typography className="menu-item" variant="h4">
+              <Phone/>
             </Typography>
           </Toolbar>
         </AppBar>
