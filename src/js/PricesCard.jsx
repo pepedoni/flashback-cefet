@@ -50,7 +50,6 @@ export default function SimpleCard() {
       <h3>Preços</h3>
       <Grid container spacing={5} alignItems="flex-end">
         {tiers.map(tier => (
-          // Enterprise card is full width at sm breakpoint
           <Grid item key={tier.title} xs={12} sm={12} md={3}>
             <Card>
               <CardHeader
