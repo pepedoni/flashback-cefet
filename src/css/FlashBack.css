@@ -1,3 +1,12 @@
+body {
+  overflow: visible;
+  background-color: black;
+}
+
+.navbar-flashback {
+  z-index: 20;
+}
+
 .menu-item {
   margin: 5px !important;
 }
@@ -34,3 +43,24 @@
 .MuiAppBar-root {
   align-items: flex-end;
 }
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 200px 100px;
+}
+
+@media (max-width: 1000px){
+
+}
+
+@media (max-width: 600px){
+
+	section{
+		padding: 80px 30px;
+	}
+
+}
+
