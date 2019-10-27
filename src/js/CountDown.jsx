@@ -32,10 +32,10 @@ export default class CountDown extends React.Component {
     const currentDate = moment();
     const diffTime = moment.duration(partyDate - currentDate, "milliseconds");
 
-    remainingTime.seconds = diffTime.seconds();
-    remainingTime.minutes = diffTime.minutes();
-    remainingTime.hours = diffTime.hours();
-    remainingTime.days = Math.floor(diffTime.asDays());
+    remainingTime.seconds = (diffTime.seconds().toString().length == 1) ? '0' + diffTime.seconds().toString() : diffTime.seconds().toString();
+    remainingTime.minutes = (diffTime.minutes().toString().length == 1) ? '0' + diffTime.minutes().toString() : diffTime.minutes().toString();
+    remainingTime.hours = (diffTime.hours().toString().length == 1) ? '0' + diffTime.hours().toString() : diffTime.hours().toString();
+    remainingTime.days = (Math.floor(diffTime.asDays()).toString().length == 1) ? '0' + Math.floor(diffTime.asDays()).toString() : Math.floor(diffTime.asDays()).toString() ;
 
     this.setState({ ...this.state, remainingTime });
 
@@ -44,51 +44,44 @@ export default class CountDown extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="countdown">
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={3}>
-            <Card className="time-card">
-              <CardContent className="time-card">
-                <Typography variant="h4" className="time-card-time">
-                  {this.state.remainingTime.days}
-                </Typography>
-                <Typography>Dias</Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={3} md={3} class="countdown-grid">
+            <div class="countdown-time">
+              {this.state.remainingTime.days}
+            </div>
+            <div class="countdown-type">
+              Dias
+            </div>
           </Grid>
 
-          <Grid item xs={12} md={3}>
-            <Card className="time-card">
-              <CardContent className="time-card">
-                <Typography variant="h4" gutterBottom>
-                  {this.state.remainingTime.hours}
-                </Typography>
-                <Typography>Horas</Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={3} md={3} class="countdown-grid">
+            <div class="countdown-time">
+              {this.state.remainingTime.hours}
+            </div>
+            <div class="countdown-type">
+              Horas
+            </div>
           </Grid>
 
-          <Grid item xs={12} md={3}>
-            <Card className="time-card">
-              <CardContent className="time-card">
-                <Typography variant="h4" gutterBottom>
-                  {this.state.remainingTime.minutes}
-                </Typography>
-                <Typography>Minutos</Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={3} md={3} class="countdown-grid">
+            <div class="countdown-time">
+              {this.state.remainingTime.minutes}
+            </div>
+            <div class="countdown-type">
+              Minutos
+            </div>
           </Grid>
 
-          <Grid item xs={12} md={3}>
-            <Card className="time-card">
-              <CardContent className="time-card">
-                <Typography variant="h4" gutterBottom>
-                  {this.state.remainingTime.seconds}
-                </Typography>
-                <Typography>Segundos</Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={3} md={3} class="countdown-grid">
+            <div class="countdown-time">
+              {this.state.remainingTime.seconds}
+            </div>
+            <div class="countdown-type">
+              Segundos
+            </div>
           </Grid>
+
         </Grid>
       </div>
     );

@@ -1,9 +1,37 @@
-.time-card {
-    width: 200px !important;
-    margin: 20px !important;
-    align-content: center;
+.countdown-grid {
+    padding: 10px;
+    text-align: center;
 }
 
-.time-card-time {
-    align-content: center;
+.countdown-time {
+    font-size: 50px;
+    color: white;
+    display: inline-block;
+    text-align: center !important;
+}
+
+.countdown-type {
+    font-size: 30px;
+    color: white;
+}
+
+@media (max-width: 1000px){
+    .countdown-time {
+        font-size: 40px;
+    }
+
+    .countdown-type {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px){
+    .countdown-time {
+        font-size: 40px;
+    }
+
+    .countdown-type {
+        font-size: 25px;
+    }
+
 }

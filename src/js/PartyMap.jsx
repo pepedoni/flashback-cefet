@@ -19,20 +19,18 @@ export class PartyMap extends React.Component {
     render() {
         return (
             <Grid container spacing={2} alignItems="center">
-                <Grid item xs={2} md={3}></Grid>
-                    <Grid item xs={8} md={3}>
-                        <Map google={this.props.google}
-                            zoom={18}
-                            style={style}
-                            initialCenter={{ lat: -19.834889, lng: -44.014472}}
-                            >
-                            <Marker
-                                title={'The marker`s title will appear as a tooltip.'}
-                                name={'SOMA'}
-                                position={{lat: -19.834889, lng: -44.014472}} />
-                            </Map>
-                        </Grid>
-                <Grid item xs={2} md={3}></Grid>
+                <Grid item xs={8} md={3}>
+                    <Map google={this.props.google}
+                        zoom={18}
+                        style={style}
+                        initialCenter={{ lat: -19.834889, lng: -44.014472}}
+                        >
+                        <Marker
+                            title={'The marker`s title will appear as a tooltip.'}
+                            name={'Resenha'}
+                            position={{lat: -19.834889, lng: -44.014472}} />
+                    </Map>
+                </Grid>
             </Grid>
         );
       }
