@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/CountDown.css";
-import { Grid, Card, CardContent, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import * as moment from "moment";
 
 export default class CountDown extends React.Component {
@@ -27,15 +27,15 @@ export default class CountDown extends React.Component {
   }
 
   calculateRemainingTime() {
-    var remainingTime = {};
+    let remainingTime = {};
     const partyDate = moment("2019-11-30T17:00:00-03:00");
     const currentDate = moment();
     const diffTime = moment.duration(partyDate - currentDate, "milliseconds");
 
-    remainingTime.seconds = (diffTime.seconds().toString().length == 1) ? '0' + diffTime.seconds().toString() : diffTime.seconds().toString();
-    remainingTime.minutes = (diffTime.minutes().toString().length == 1) ? '0' + diffTime.minutes().toString() : diffTime.minutes().toString();
-    remainingTime.hours = (diffTime.hours().toString().length == 1) ? '0' + diffTime.hours().toString() : diffTime.hours().toString();
-    remainingTime.days = (Math.floor(diffTime.asDays()).toString().length == 1) ? '0' + Math.floor(diffTime.asDays()).toString() : Math.floor(diffTime.asDays()).toString() ;
+    remainingTime.seconds = (diffTime.seconds().toString().length === 1) ? '0' + diffTime.seconds().toString() : diffTime.seconds().toString();
+    remainingTime.minutes = (diffTime.minutes().toString().length === 1) ? '0' + diffTime.minutes().toString() : diffTime.minutes().toString();
+    remainingTime.hours = (diffTime.hours().toString().length === 1) ? '0' + diffTime.hours().toString() : diffTime.hours().toString();
+    remainingTime.days = (Math.floor(diffTime.asDays()).toString().length === 1) ? '0' + Math.floor(diffTime.asDays()).toString() : Math.floor(diffTime.asDays()).toString() ;
 
     this.setState({ ...this.state, remainingTime });
 
