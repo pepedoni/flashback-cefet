@@ -1,6 +1,5 @@
 import React from "react";
-import "../css/CountDown.css";
-import { Grid } from "@material-ui/core";
+import "../css/CountDown.scss";
 import * as moment from "moment";
 
 export default class CountDown extends React.Component {
@@ -32,57 +31,77 @@ export default class CountDown extends React.Component {
     const currentDate = moment();
     const diffTime = moment.duration(partyDate - currentDate, "milliseconds");
 
-    remainingTime.seconds = (diffTime.seconds().toString().length === 1) ? '0' + diffTime.seconds().toString() : diffTime.seconds().toString();
-    remainingTime.minutes = (diffTime.minutes().toString().length === 1) ? '0' + diffTime.minutes().toString() : diffTime.minutes().toString();
-    remainingTime.hours = (diffTime.hours().toString().length === 1) ? '0' + diffTime.hours().toString() : diffTime.hours().toString();
-    remainingTime.days = (Math.floor(diffTime.asDays()).toString().length === 1) ? '0' + Math.floor(diffTime.asDays()).toString() : Math.floor(diffTime.asDays()).toString() ;
+    remainingTime.seconds = diffTime
+      .seconds()
+      .toString()
+      .padStart(2, "0");
+    remainingTime.minutes = diffTime
+      .minutes()
+      .toString()
+      .padStart(2, "0");
+    remainingTime.hours = diffTime
+      .hours()
+      .toString()
+      .padStart(2, "0");
+    remainingTime.days = Math.floor(diffTime.asDays())
+      .toString()
+      .padStart(2, "0");
 
     this.setState({ ...this.state, remainingTime });
 
     this.timeout = setTimeout(() => this.calculateRemainingTime(), 1000);
   }
 
+  renderItem(number, label) {
+    return (
+      <div className="countdown-item">
+        <span className="countdown-item-number">{number}</span>
+        <span className="countdown-item-label">{label}</span>
+      </div>
+    );
+  }
+
   render() {
     return (
-      <div class="countdown">
-        <Grid container spacing={2} alignItems="center">
-          <Grid item xs={3} md={3} class="countdown-grid">
-            <div class="countdown-time">
-              {this.state.remainingTime.days}
-            </div>
-            <div class="countdown-type">
-              Dias
-            </div>
-          </Grid>
-
-          <Grid item xs={3} md={3} class="countdown-grid">
-            <div class="countdown-time">
-              {this.state.remainingTime.hours}
-            </div>
-            <div class="countdown-type">
-              Horas
-            </div>
-          </Grid>
-
-          <Grid item xs={3} md={3} class="countdown-grid">
-            <div class="countdown-time">
-              {this.state.remainingTime.minutes}
-            </div>
-            <div class="countdown-type">
-              Minutos
-            </div>
-          </Grid>
-
-          <Grid item xs={3} md={3} class="countdown-grid">
-            <div class="countdown-time">
-              {this.state.remainingTime.seconds}
-            </div>
-            <div class="countdown-type">
-              Segundos
-            </div>
-          </Grid>
-
-        </Grid>
+      <div className="countdown-container">
+        <div className="countdown-header">
+          <a
+            href="https://twitter.com/intent/tweet?hashtags=FLASHBACKCEFET"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tweet com #FLASHBACKCEFET
+          </a>
+          <a
+            href="https://open.spotify.com/playlist/6hNp3o2BPT7coXmf7tdN0W?si=R0mLtMn-S5aLnBzBOF3YMA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="Spotify Playlist"
+              width="20"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png"
+            />
+          </a>
+        </div>
+        <div className="countdown-logo">
+          <img src="/flshbck-logo.png" alt="Flashback CEFET logo" />
+        </div>
+        <div className="countdown-content">
+          {this.renderItem(this.state.remainingTime.days, "Dias")}
+          {this.renderItem(this.state.remainingTime.hours, "Horas")}
+          {this.renderItem(this.state.remainingTime.minutes, "Minutos")}
+          {this.renderItem(this.state.remainingTime.seconds, "Segundos")}
+        </div>
+        <a href="#prices-page" className="countdown-footer">
+          <img src="/arrow.png" alt="Flashback CEFET arrow-down" />
+          <span>mais informações em breve</span>
+          <span
+            style={{ position: "absolute", right: 4, fontSize: 10, bottom: 4 }}
+          >
+            by Cardume
+          </span>
+        </a>
       </div>
     );
   }
