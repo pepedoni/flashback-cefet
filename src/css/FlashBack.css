@@ -13,7 +13,7 @@ body {
 
 .MuiAppBar-colorPrimary {
   color: #fff;
-  background-color: #232a50 !important;
+  background-color: #000 !important;
 }
 
 .MuiLinearProgress-colorSecondary {

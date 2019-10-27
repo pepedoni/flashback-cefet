@@ -6,7 +6,7 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 const style = {
     width: '50%',
     height: '50%'
-  }
+}
 
 export class PartyMap extends React.Component {
     

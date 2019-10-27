@@ -2,15 +2,19 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import CardHeader from '@material-ui/core/CardHeader';
 
 const useStyles = makeStyles(theme => ({
 
   cardHeader: {
-    backgroundColor: theme.palette.grey[200],
+    backgroundColor: '#000',
+    color: '#fff',
+    border: 'solid 1px #fff'
   },
   cardPricing: {
     display: 'flex',
@@ -58,7 +62,7 @@ export default function SimpleCard() {
                 subheaderTypographyProps={{ align: 'center' }}
                 className={classes.cardHeader}
               />
-              <CardContent>
+              <CardContent class="cards-price">
                 <div className={classes.cardPricing}>
                   <Typography component="h2" variant="h3" color="textPrimary">
                     R${tier.price}
@@ -68,6 +72,9 @@ export default function SimpleCard() {
             </Card>
           </Grid>
         ))}
+        <CardActions>
+          <Button class="btn-sale" size="small"><a href="https://www.sympla.com.br/flashback-cefet__697366" target="_blank">Comprar</a></Button>
+        </CardActions>
       </Grid>
   </Container>
   );
