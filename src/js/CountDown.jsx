@@ -93,15 +93,22 @@ export default class CountDown extends React.Component {
           {this.renderItem(this.state.remainingTime.minutes, "Minutos")}
           {this.renderItem(this.state.remainingTime.seconds, "Segundos")}
         </div>
-        <a href="#prices-page" className="countdown-footer">
-          <img src="/arrow.png" alt="Flashback CEFET arrow-down" />
-          <span>mais informações em breve</span>
-          <span
-            style={{ position: "absolute", right: 4, fontSize: 10, bottom: 4 }}
-          >
-            by Cardume
-          </span>
-        </a>
+        <div className="countdown-footer">
+          <a href="#prices-page">
+            <img src="/arrow.png" alt="Flashback CEFET arrow-down" />
+            <span>mais informações em breve</span>
+            <span
+              style={{
+                position: "fixed",
+                right: 4,
+                fontSize: 10,
+                bottom: 4
+              }}
+            >
+              by Cardume
+            </span>
+          </a>
+        </div>
       </div>
     );
   }
