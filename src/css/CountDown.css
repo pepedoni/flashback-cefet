@@ -22,6 +22,10 @@
     color: white;
 }
 
+span.label {
+    background-color: black;
+}
+
 @media (max-width: 1000px){
     .countdown-time {
         font-size: 40px;
