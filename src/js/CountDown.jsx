@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/CountDown.scss";
 import * as moment from "moment";
-import { TwitterHashtagButton } from 'react-twitter-embed';
 
 export default class CountDown extends React.Component {
   constructor(props) {
@@ -66,10 +65,14 @@ export default class CountDown extends React.Component {
     return (
       <div className="countdown-container">
         <div className="countdown-header">
-          <div className="twitter-button"> 
-            <TwitterHashtagButton tag="FLASHBACK" className="twitter-button" options={{size: 'large',screenName: null,buttonHashtag: null}} />
-          </div>
-           <a
+          <a
+            href="https://twitter.com/intent/tweet?hashtags=FLASHBACKCEFET"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tweet com #FLASHBACKCEFET
+          </a>
+          <a
             href="https://open.spotify.com/playlist/6hNp3o2BPT7coXmf7tdN0W?si=R0mLtMn-S5aLnBzBOF3YMA"
             target="_blank"
             rel="noopener noreferrer"
