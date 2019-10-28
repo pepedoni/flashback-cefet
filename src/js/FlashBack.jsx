@@ -19,7 +19,7 @@ export default function FlaskBack(props) {
           <Room fontSize="small" />
         </a>
       </div> */}
-      <div className="countdown-page" id="countdown-page">
+      <div className="countdown-page a" id="countdown-page">
         <CountDown />
       </div>
       {/* <section className="page-2" id="prices-page">
