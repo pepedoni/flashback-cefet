@@ -27,3 +27,13 @@
 .CallToAction {
     border-color: rgb(53, 72, 90) !important;
 }
+
+.intro{
+    text-align: center;
+}
+
+@media(max-width: 550px){
+    .tweets {
+        width: 340px !important;
+   }
+}

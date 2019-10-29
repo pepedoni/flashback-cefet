@@ -29,6 +29,7 @@ export default class TweetsFlashback extends React.Component {
     render() {
         return (
             <div class="content-tweets">
+                <p class="intro"> Veja o que as pessoas estão falando sobre o evento</p>
                 <div class="tweets">
                     {
                         this.state.tweetsFlashback.map( tweet => 
