@@ -103,11 +103,14 @@
 @media(max-width: 768px) {
   .prices-page {
     .prices-container {
-      .prices-content {     
+      .prices-content {
+        text-align: left;
         .prices-seller {
           .seller-contact {
             a {
               display: flex;
+              align-items: center;
+              margin: 4px 0;
             }
           }
         }
