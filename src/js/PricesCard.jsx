@@ -1,85 +1,124 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
-import CardHeader from "@material-ui/core/CardHeader";
-
-const useStyles = makeStyles(theme => ({
-  cardHeader: {
-    backgroundColor: "#000",
-    color: "#fff",
-    border: "solid 1px #fff"
-  },
-  cardPricing: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "baseline",
-    marginBottom: theme.spacing(2)
-  }
-}));
+import "../css/PricesCard.scss";
+import { Grid } from "@material-ui/core";
 
 const tiers = [
   {
     title: "1° Lote",
-    price: "35"
+    value: "35",
+    sold_out: true
   },
   {
     title: "2° Lote",
-    price: "40"
+    value: "40",
+    sold_out: false
   },
   {
     title: "3° Lote",
-    price: "45"
+    value: "45",
+    sold_out: false
   },
   {
     title: "4° Lote",
-    price: "50"
+    value: "50",
+    sold_out: false
   }
 ];
 
-export default function SimpleCard() {
-  const classes = useStyles();
+const sellers = [
+  {
+    name: "Pedro Moutinho",
+    location: "Savassi / UFMG",
+    contact: "553175452165",
+    masked_contact: "(31) 7545-2165"
+  },
+  {
+    name: "Matheus Duarte",
+    location: "Centro / PUC São Gabriel",
+    contact: "553191466722",
+    masked_contact: "(31) 9146-6722"
+  },
+  {
+    name: "Guilherme Otávio",
+    location: "UFMG",
+    contact: "553192963132",
+    masked_contact: "(31) 9296-3132"
+  }
+];
 
-  return (
-    <Container component="main">
-      <h3>Preços</h3>
-      <Grid container spacing={5} alignItems="flex-end">
-        {tiers.map(tier => (
-          <Grid item key={tier.title} xs={12} sm={12} md={3}>
-            <Card>
-              <CardHeader
-                title={tier.title}
-                subheader={tier.subheader}
-                titleTypographyProps={{ align: "center" }}
-                subheaderTypographyProps={{ align: "center" }}
-                className={classes.cardHeader}
-              />
-              <CardContent className="cards-price">
-                <div className={classes.cardPricing}>
-                  <Typography component="h2" variant="h3" color="textPrimary">
-                    R${tier.price}
-                  </Typography>
+export default class PricesCard extends React.Component {
+  renderSeller(seller) {
+    return (
+      <div className="prices-seller">
+        <span className="seller-name">
+          {seller.name} ({seller.location})
+        </span>
+        <span className="seller-contact">
+          <a
+            href={`https://wa.me/${seller.contact}/?text=Olá, quero comprar ingresso para a flashback`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/wpp-logo.png" alt="Whats app" /> Clique aqui e envie uma
+            mensagem para {seller.name.split(" ")[0]} {seller.masked_contact}
+          </a>
+        </span>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div className="prices-container">
+        <div className="prices-header">
+          <span>Ingressos</span>
+        </div>
+        <div className="prices-content">
+          <Grid container alignContent="center" alignItems="center">
+            <Grid item xs={12} md={6} className="prices-sellers">
+              <>
+                <div className="prices-sub-header">Compre com:</div>
+                {sellers.map(seller => this.renderSeller(seller))}
+                <div className="prices-sub-header">Ou pelo Sympla:</div>
+                <div className="prices-seller">
+                  <span className="seller-contact">
+                    <a
+                      href="https://www.sympla.com.br/flashback-cefet__697366"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src="/sympla-logo.png" alt="Whats app" /> Clique aqui
+                      para comprar pelo Sympla
+                    </a>
+                  </span>
                 </div>
-              </CardContent>
-            </Card>
+              </>
+            </Grid>
+            <Grid item xs={12} md={6} className="prices-tiers">
+              <Grid container spacing={2} style={{ padding: "0 12px" }}>
+                {tiers.map(tier => (
+                  <Grid item xs={12} md={6}>
+                    <a
+                      href="https://www.sympla.com.br/flashback-cefet__697366"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div
+                        className={`prices-tier ${
+                          tier.sold_out ? "prices-tier--sold-out" : ""
+                        }`}
+                      >
+                        <span>{tier.title}</span>
+                        <span>R$ {tier.value},00</span>
+                      </div>
+                    </a>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
           </Grid>
-        ))}
-        <CardActions>
-          <Button className="btn-sale" size="small">
-            <a
-              href="https://www.sympla.com.br/flashback-cefet__697366"
-              target="_blank"
-            >
-              Comprar
-            </a>
-          </Button>
-        </CardActions>
-      </Grid>
-    </Container>
-  );
+        </div>
+      </div>
+    );
+  }
 }

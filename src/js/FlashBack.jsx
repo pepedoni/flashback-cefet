@@ -8,23 +8,24 @@ import { AccessTime, AttachMoney, Room } from "@material-ui/icons";
 export default function FlaskBack(props) {
   return (
     <>
-      {/* <div className="side-menu">
+      <div className="side-menu">
         <a href="#countdown-page">
           <AccessTime fontSize="small" />
         </a>
         <a href="#prices-page">
-          <AttachMoney fontSize="small  " />
+          <AttachMoney fontSize="small" />
         </a>
-        <a href="#map-page">
+        {/* <a href="#map-page">
           <Room fontSize="small" />
-        </a>
-      </div> */}
-      <div className="countdown-page a" id="countdown-page">
+        </a> */}
+      </div>
+      <div className="countdown-page" id="countdown-page">
         <CountDown />
       </div>
-      {/* <section className="page-2" id="prices-page">
+      <div className="prices-page" id="prices-page">
         <PricesCard />
-      </section>
+      </div>
+      {/*}
       <section className="page-3" id="map-page">
         <PartyMap />
       </section> */}
