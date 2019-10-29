@@ -87,7 +87,7 @@ export default class PricesCard extends React.Component {
           <Grid container alignContent="center" alignItems="center">
             <Grid item xs={12} md={12} className="prices-sellers">
               <>
-                <Grid item xs={12} md={12} alignItems="center" style={{paddingBottom: '50px'}}>
+                <Grid item xs={12} md={12} alignItems="center" style={{paddingBottom: '40px'}}>
                   <div className="prices-sub-header">Compre pelo Sympla:</div>
                   <div className="prices-seller">
                     <span className="seller-contact">
@@ -103,7 +103,7 @@ export default class PricesCard extends React.Component {
                   </div>
                 </Grid>
                 <div className="prices-sub-header">Ou Compre com:</div>
-                <Grid container spacing={2} style={{ padding: "0 12px", paddingBottom: '50px' }}>
+                <Grid container spacing={2} style={{ padding: "0 12px", paddingBottom: '40px' }}>
                   {sellers.map(seller => this.renderSeller(seller))}
                 </Grid>
               </>
