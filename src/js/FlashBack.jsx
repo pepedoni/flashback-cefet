@@ -3,6 +3,7 @@ import "../css/FlashBack.css";
 import CountDown from "./CountDown";
 import PartyMap from "./PartyMap";
 import PricesCard from "./PricesCard";
+import TweetsFlashback from "./TweetsFlashback";
 import { AccessTime, AttachMoney, Room } from "@material-ui/icons";
 
 export default function FlaskBack(props) {
@@ -25,6 +26,7 @@ export default function FlaskBack(props) {
       <div className="prices-page" id="prices-page">
         <PricesCard />
       </div>
+      {/* <TweetsFlashback /> */}
       {/*}
       <section className="page-3" id="map-page">
         <PartyMap />

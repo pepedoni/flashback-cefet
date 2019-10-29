@@ -1,0 +1,29 @@
+.tweets {
+	 max-height: 500px;
+	 overflow-y: auto;
+}
+
+.content-tweets {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.down {
+    transform: rotate(-90deg);
+    width: 20px;
+    padding: 5px;
+}
+
+.EmbeddedTweet .EmbeddedTweet--cta .js-clickToOpenTarget {
+    background-color: rgb(21, 32, 43) !important;
+    color: #fff !important;
+    border-color: rgb(53, 72, 90) !important;
+	
+}
+
+.CallToAction {
+    border-color: rgb(53, 72, 90) !important;
+}
