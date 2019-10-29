@@ -6,29 +6,33 @@ const tiers = [
   {
     title: "1° Lote",
     value: "35",
-    sold_out: true
+    sold_out: false,
+    selling: true
   },
   {
     title: "2° Lote",
     value: "40",
-    sold_out: false
+    sold_out: false,
+    selling: false
   },
   {
     title: "3° Lote",
     value: "45",
-    sold_out: false
+    sold_out: false,
+    selling: false
   },
   {
     title: "4° Lote",
     value: "50",
-    sold_out: false
+    sold_out: false,
+    selling: false
   }
 ];
 
 const sellers = [
   {
     name: "Pedro Moutinho",
-    location: "Savassi / UFMG",
+    location: "Savassi / UFMG Noite",
     contact: "553175452165",
     masked_contact: "(31) 7545-2165"
   },
@@ -40,7 +44,13 @@ const sellers = [
   },
   {
     name: "Guilherme Otávio",
-    location: "UFMG",
+    location: "UFMG Tarde",
+    contact: "553192963132",
+    masked_contact: "(31) 9296-3132"
+  },  
+  {
+    name: "Matheus Frade",
+    location: "UFMG Noite",
     contact: "553192963132",
     masked_contact: "(31) 9296-3132"
   }
@@ -49,7 +59,7 @@ const sellers = [
 export default class PricesCard extends React.Component {
   renderSeller(seller) {
     return (
-      <div className="prices-seller">
+      <Grid className="prices-seller" item xs={12} md={6}>
         <span className="seller-name">
           {seller.name} ({seller.location})
         </span>
@@ -63,7 +73,7 @@ export default class PricesCard extends React.Component {
             mensagem para {seller.name.split(" ")[0]} {seller.masked_contact}
           </a>
         </span>
-      </div>
+      </Grid>
     );
   }
 
@@ -75,29 +85,33 @@ export default class PricesCard extends React.Component {
         </div>
         <div className="prices-content">
           <Grid container alignContent="center" alignItems="center">
-            <Grid item xs={12} md={6} className="prices-sellers">
+            <Grid item xs={12} md={12} className="prices-sellers">
               <>
-                <div className="prices-sub-header">Compre com:</div>
-                {sellers.map(seller => this.renderSeller(seller))}
-                <div className="prices-sub-header">Ou pelo Sympla:</div>
-                <div className="prices-seller">
-                  <span className="seller-contact">
-                    <a
-                      href="https://www.sympla.com.br/flashback-cefet__697366"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src="/sympla-logo.png" alt="Whats app" /> Clique aqui
-                      para comprar pelo Sympla
-                    </a>
-                  </span>
-                </div>
+                <Grid item xs={12} md={12} alignItems="center" style={{paddingBottom: '50px'}}>
+                  <div className="prices-sub-header">Compre pelo Sympla:</div>
+                  <div className="prices-seller">
+                    <span className="seller-contact">
+                      <a
+                        href="https://www.sympla.com.br/flashback-cefet__697366"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src="/sympla-logo.png" alt="Whats app" /> Clique aqui
+                        para comprar pelo Sympla
+                      </a>
+                    </span>
+                  </div>
+                </Grid>
+                <div className="prices-sub-header">Ou Compre com:</div>
+                <Grid container spacing={2} style={{ padding: "0 12px", paddingBottom: '50px' }}>
+                  {sellers.map(seller => this.renderSeller(seller))}
+                </Grid>
               </>
             </Grid>
-            <Grid item xs={12} md={6} className="prices-tiers">
+            <Grid item xs={12} md={12} className="prices-tiers">
               <Grid container spacing={2} style={{ padding: "0 12px" }}>
                 {tiers.map(tier => (
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} md={3}>
                     <a
                       href="https://www.sympla.com.br/flashback-cefet__697366"
                       target="_blank"
@@ -105,7 +119,7 @@ export default class PricesCard extends React.Component {
                     >
                       <div
                         className={`prices-tier ${
-                          tier.sold_out ? "prices-tier--sold-out" : ""
+                          tier.sold_out ? "prices-tier--sold-out" : (tier.selling ? "prices-tier--selling" : "")
                         }`}
                       >
                         <span>{tier.title}</span>

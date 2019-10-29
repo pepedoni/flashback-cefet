@@ -29,7 +29,7 @@ export default class TweetsFlashback extends React.Component {
     render() {
         return (
             <div class="content-tweets">
-                <p class="intro"> Veja o que as pessoas estão falando sobre o evento</p>
+                <h3 class="intro"> Veja o que as pessoas estão falando sobre o evento</h3>
                 <div class="tweets">
                     {
                         this.state.tweetsFlashback.map( tweet => 
@@ -39,7 +39,6 @@ export default class TweetsFlashback extends React.Component {
                         )
                     }
                 </div>
-                <img src="/arrow.png" class="down" alt="Flashback CEFET arrow-down"></img>
             </div>
         );
     }

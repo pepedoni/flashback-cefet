@@ -26,6 +26,7 @@
 
     .prices-content {
       padding: 12px;
+      text-align: center;
 
       .prices-seller {
         display: flex;
@@ -36,9 +37,9 @@
 
         .seller-contact {
           font-size: 12px;
+          text-align: center;
 
           a {
-            display: flex;
             align-items: center;
             margin: 4px 0;
 
@@ -74,6 +75,110 @@
             display: flex;
             align-items: center;
             justify-content: center;
+          }
+        }
+
+        &--selling {
+          position: relative;
+          &:before {
+            content: "VENDENDO";
+            position: absolute;
+            left: 0px;
+            background: rgb(255, 255, 255);
+            color: #81b71a;
+            padding: 12px;
+            border-radius: 2px 0px 0px 2px;
+            font-size: 12px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .prices-page {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+  
+    .prices-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex: 1 1;
+      flex-direction: column;
+  
+      .prices-header {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        justify-content: center;
+        padding: 12px;
+        font-size: 24px;
+      }
+  
+      .prices-sub-header {
+        font-size: 18px;
+        padding: 12px;
+      }
+  
+      .prices-content {
+        padding: 12px;
+        text-align: left;
+        
+        .prices-seller {
+          display: flex;
+          align-content: unset;
+          margin-bottom: 12px;
+          flex-direction: column;
+          padding-left: 24px;
+  
+          .seller-contact {
+            font-size: 12px;
+  
+            a {
+              display: flex;
+              align-items: center;
+              margin: 4px 0;
+  
+              img {
+                width: 20px;
+                margin-right: 8px;
+              }
+            }
+          }
+        }
+  
+        .prices-tier {
+          display: flex;
+          padding: 12px;
+          border: 1px solid;
+          align-items: center;
+          justify-content: center;
+          border-radius: 4px;
+          flex-direction: column;
+  
+          &--sold-out {
+            position: relative;
+            &:before {
+              content: "ESGOTADO";
+              position: absolute;
+              left: 0px;
+              background: rgb(255, 255, 255);
+              color: #e85757;
+              padding: 12px;
+              border-radius: 2px 0px 0px 2px;
+              font-size: 12px;
+              height: 38px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
         }
       }
