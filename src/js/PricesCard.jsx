@@ -51,8 +51,8 @@ const sellers = [
   {
     name: "Matheus Frade",
     location: "UFMG Noite",
-    contact: "553192963132",
-    masked_contact: "(31) 9296-3132"
+    contact: "553175634028",
+    masked_contact: "(31) 7563-4028"
   }
 ];
 
