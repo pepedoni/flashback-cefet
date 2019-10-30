@@ -34,17 +34,6 @@ export default function FlaskBack(props) {
           <TweetsFlashback />
         </div> 
       
-<<<<<<< HEAD
-=======
-        {
-          /* 
-          <TweetsFlashback />
-            <section className="page-3" id="map-page">
-              <PartyMap />
-            </section> 
-          */
-        }
->>>>>>> 2ab8e86871f619b4d6eedb543ef5797167977c4a
       </div>
   );
 }
