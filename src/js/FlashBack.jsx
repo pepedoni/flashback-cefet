@@ -16,9 +16,13 @@ export default function FlaskBack(props) {
           <a href="#prices-page">
             <AttachMoney fontSize="small" />
           </a>
-          <a href="#map-page">
-            <Room fontSize="small" />
-          </a>
+          {
+            /* 
+              <a href="#map-page">
+                <Room fontSize="small" />
+              </a> 
+            */
+          }
         </div> 
       
     
@@ -31,11 +35,14 @@ export default function FlaskBack(props) {
           <PricesCard />
         </div> 
       
-        <TweetsFlashback />
-      
-        <section className="page-3" id="map-page">
-          <PartyMap />
-        </section>
+        {
+          /* 
+          <TweetsFlashback />
+            <section className="page-3" id="map-page">
+              <PartyMap />
+            </section> 
+          */
+        }
       </div>
   );
 }

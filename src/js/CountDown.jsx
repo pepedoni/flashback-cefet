@@ -96,7 +96,7 @@ export default class CountDown extends React.Component {
         <div className="countdown-footer">
           <a href="#prices-page">
             <img src="/arrow.png" alt="Flashback CEFET arrow-down" />
-            <span>mais informações em breve</span>
+            <span>mais informações</span>
             <span
               style={{
                 position: "fixed",
