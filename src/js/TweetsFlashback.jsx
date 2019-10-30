@@ -29,16 +29,8 @@ export default class TweetsFlashback extends React.Component {
     render() {
         return (
             <div className="content-tweets">
-            <p className="intro"> Veja o que as pessoas estão falando sobre o evento</p>
-            {/* <a
-                href="https://twitter.com/intent/tweet?hashtags=FLASHBACKCEFET"
-                target="_blank"
-                className="twiter-link"
-                rel="noopener noreferrer"
-            >
-                Tweet com #FLASHBACKCEFET
-            </a> */}
-                <TwitterHashtagButton tag="FLASHBACKCEFET" />
+                <p className="intro"> Veja o que as pessoas estão falando sobre o evento</p>
+                <TwitterHashtagButton tag="FLASHBACKCEFET" className="btn-twitter"/>
                 <div className="tweets">
                     {
                         this.state.tweetsFlashback.map( tweet => 
