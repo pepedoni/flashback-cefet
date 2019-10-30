@@ -6,20 +6,20 @@ const tiers = [
   {
     title: "1° Lote",
     value: "35",
-    sold_out: false,
-    selling: true
+    sold_out: true,
+    selling: false
   },
   {
     title: "2° Lote",
     value: "40",
-    sold_out: false,
+    sold_out: true,
     selling: false
   },
   {
     title: "3° Lote",
     value: "45",
     sold_out: false,
-    selling: false
+    selling: true
   },
   {
     title: "4° Lote",
