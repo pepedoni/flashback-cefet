@@ -65,13 +65,15 @@ export default class CountDown extends React.Component {
     return (
       <div className="countdown-container">
         <div className="countdown-header">
-          <a
-            href="https://twitter.com/intent/tweet?hashtags=FLASHBACKCEFET"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tweet com #FLASHBACKCEFET
-          </a>
+          <span className="seller-contact">
+            <a
+              href="https://www.sympla.com.br/flashback-cefet__697366"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/sympla-logo.png" alt="Whats app" /> Compre pelo Sympla
+            </a>
+          </span>
           <a
             href="https://open.spotify.com/playlist/6hNp3o2BPT7coXmf7tdN0W?si=R0mLtMn-S5aLnBzBOF3YMA"
             target="_blank"

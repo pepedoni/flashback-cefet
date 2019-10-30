@@ -16,12 +16,11 @@ export default function FlaskBack(props) {
           <a href="#prices-page">
             <AttachMoney fontSize="small" />
           </a>
-          <a href="#map-page">
-            <Room fontSize="small" />
+          <a href="#twitter-page">
+            <img src="/twitter-logo.png" width="18px"/>
           </a>
         </div> 
       
-    
         <div className="countdown-page" id="countdown-page">
           <CountDown />
         </div>
@@ -30,12 +29,11 @@ export default function FlaskBack(props) {
         <div className="prices-page" id="prices-page">
           <PricesCard />
         </div> 
+
+        <div className="twitter-page" id="twitter-page">
+          <TweetsFlashback />
+        </div> 
       
-        <TweetsFlashback />
-      
-        <section className="page-3" id="map-page">
-          <PartyMap />
-        </section>
       </div>
   );
 }

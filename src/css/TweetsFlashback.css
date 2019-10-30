@@ -32,6 +32,10 @@
     text-align: center;
 }
 
+.twiter-link{
+    margin: 5px;
+}
+
 @media(max-width: 550px){
     .tweets {
         width: 340px !important;
