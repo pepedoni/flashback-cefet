@@ -18,14 +18,14 @@ const tiers = [
   {
     title: "3° Lote",
     value: "45",
-    sold_out: false,
-    selling: true
+    sold_out: true,
+    selling: false
   },
   {
     title: "4° Lote",
     value: "50",
     sold_out: false,
-    selling: false
+    selling: true
   }
 ];
 
