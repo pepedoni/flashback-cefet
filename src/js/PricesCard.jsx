@@ -47,7 +47,7 @@ const sellers = [
     location: "UFMG Tarde",
     contact: "553192963132",
     masked_contact: "(31) 9296-3132"
-  },  
+  },
   {
     name: "Matheus Frade",
     location: "UFMG Noite",
@@ -69,8 +69,11 @@ export default class PricesCard extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/wpp-logo.png" alt="Whats app" /> Clique aqui e envie uma
-            mensagem para {seller.name.split(" ")[0]} {seller.masked_contact}
+            <img src="/wpp-logo.png" alt="Whats app" />
+            <div>
+              <div>Clique aqui para enviar uma mensagem</div>
+              {seller.masked_contact}
+            </div>
           </a>
         </span>
       </Grid>
@@ -87,7 +90,13 @@ export default class PricesCard extends React.Component {
           <Grid container alignContent="center" alignItems="center">
             <Grid item xs={12} md={12} className="prices-sellers">
               <>
-                <Grid item xs={12} md={12} alignItems="center" style={{paddingBottom: '40px'}}>
+                <Grid
+                  item
+                  xs={12}
+                  md={12}
+                  alignItems="center"
+                  style={{ paddingBottom: "40px" }}
+                >
                   <div className="prices-sub-header">Compre pelo Sympla:</div>
                   <div className="prices-seller">
                     <span className="seller-contact">
@@ -96,14 +105,18 @@ export default class PricesCard extends React.Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img src="/sympla-logo.png" alt="Whats app" /> Clique aqui
-                        para comprar pelo Sympla
+                        <img src="/sympla-logo.png" alt="Whats app" /> Clique
+                        aqui para comprar pelo Sympla
                       </a>
                     </span>
                   </div>
                 </Grid>
                 <div className="prices-sub-header">Ou Compre com:</div>
-                <Grid container spacing={2} style={{ padding: "0 12px", paddingBottom: '40px' }}>
+                <Grid
+                  container
+                  spacing={2}
+                  style={{ padding: "0 12px", paddingBottom: "40px" }}
+                >
                   {sellers.map(seller => this.renderSeller(seller))}
                 </Grid>
               </>
@@ -119,7 +132,11 @@ export default class PricesCard extends React.Component {
                     >
                       <div
                         className={`prices-tier ${
-                          tier.sold_out ? "prices-tier--sold-out" : (tier.selling ? "prices-tier--selling" : "")
+                          tier.sold_out
+                            ? "prices-tier--sold-out"
+                            : tier.selling
+                            ? "prices-tier--selling"
+                            : ""
                         }`}
                       >
                         <span>{tier.title}</span>

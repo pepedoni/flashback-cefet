@@ -37,12 +37,9 @@
 
         .seller-contact {
           font-size: 12px;
-          text-align: center;
 
           a {
-            align-items: center;
             margin: 4px 0;
-            justify-content: center;
 
             img {
               width: 20px;
@@ -101,7 +98,7 @@
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .prices-page {
     .prices-container {
       .prices-content {

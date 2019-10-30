@@ -51,13 +51,13 @@
 
 @keyframes pulse {
   0% {
-      transform: translate(0px, 0px) rotate(-90deg);
+    transform: translate(0px, 0px) rotate(-90deg);
   }
   50% {
-      transform: translate(0px, 8px) rotate(-90deg);
+    transform: translate(0px, 8px) rotate(-90deg);
   }
   100% {
-      transform: translate(0px, 0px) rotate(-90deg);
+    transform: translate(0px, 0px) rotate(-90deg);
   }
 }
 
@@ -70,9 +70,9 @@
   left: 0;
   border-radius: 0 8px 8px 0;
   z-index: 9999999;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 
   a {
     padding: 4px;
@@ -110,6 +110,22 @@
 
       a {
         font-size: 12px;
+      }
+
+      .seller-contact {
+        font-size: 12px;
+        text-align: center;
+
+        a {
+          align-items: center;
+          margin: 4px 0;
+          display: flex;
+
+          img {
+            width: 20px;
+            margin-right: 8px;
+          }
+        }
       }
     }
 
@@ -167,22 +183,6 @@
         animation-iteration-count: infinite;
         animation-delay: calc(6s * 0.2 + 0.5s);
       }
-    }
-  }
-}
-
-.seller-contact {
-  font-size: 12px;
-  text-align: center;
-
-  a {
-    align-items: center;
-    margin: 4px 0;
-    display: flex;
-
-    img {
-      width: 20px;
-      margin-right: 8px;
     }
   }
 }
