@@ -35,6 +35,7 @@ export default class TweetsFlashback extends React.Component {
                     {
                         this.state.tweetsFlashback.map( tweet => 
                             <TwitterTweetEmbed
+                                key={tweet.id}  
                                 tweetId={tweet.id_str}
                             /> 
                         )

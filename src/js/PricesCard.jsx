@@ -31,24 +31,28 @@ const tiers = [
 
 const sellers = [
   {
+    id: 1,
     name: "Pedro Moutinho",
     location: "Savassi / UFMG Noite",
     contact: "553175452165",
     masked_contact: "(31) 7545-2165"
   },
   {
+    id: 2,
     name: "Matheus Duarte",
     location: "Centro / PUC São Gabriel",
     contact: "553191466722",
     masked_contact: "(31) 9146-6722"
   },
   {
+    id: 3,
     name: "Guilherme Otávio",
     location: "UFMG Tarde",
     contact: "553192963132",
     masked_contact: "(31) 9296-3132"
   },
   {
+    id: 4,
     name: "Matheus Frade",
     location: "UFMG Noite",
     contact: "553175634028",
@@ -59,7 +63,7 @@ const sellers = [
 export default class PricesCard extends React.Component {
   renderSeller(seller) {
     return (
-      <Grid className="prices-seller" item xs={12} md={6}>
+      <Grid className="prices-seller" item xs={12} md={6} key={seller.id}>
         <span className="seller-name">
           {seller.name} ({seller.location})
         </span>
@@ -94,7 +98,6 @@ export default class PricesCard extends React.Component {
                   item
                   xs={12}
                   md={12}
-                  alignItems="center"
                   style={{ paddingBottom: "40px" }}
                 >
                   <div className="prices-sub-header">Compre pelo Sympla:</div>
@@ -123,8 +126,8 @@ export default class PricesCard extends React.Component {
             </Grid>
             <Grid item xs={12} md={12} className="prices-tiers">
               <Grid container spacing={2} style={{ padding: "0 12px" }}>
-                {tiers.map(tier => (
-                  <Grid item xs={12} md={3}>
+                {tiers.map((tier, i) => (
+                  <Grid item xs={12} md={3} key={i}>
                     <a
                       href="https://www.sympla.com.br/flashback-cefet__697366"
                       target="_blank"

@@ -99,6 +99,7 @@ export default class CountDown extends React.Component {
           <a href="#prices-page">
             <img src="/arrow.png" alt="Flashback CEFET arrow-down" />
             <span>mais informações</span>
+            <span>
             <a href="https://www.youtube.com/watch?v=_snpkt5AAbs&t=" target="_blank">
               <span
                 style={{
@@ -111,6 +112,7 @@ export default class CountDown extends React.Component {
                 by Cardume
               </span>
             </a>
+            </span>
           </a>
         </div>
       </div>
