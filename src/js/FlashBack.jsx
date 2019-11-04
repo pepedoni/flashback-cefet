@@ -4,7 +4,8 @@ import CountDown from "./CountDown";
 import PartyMap from "./PartyMap";
 import PricesCard from "./PricesCard";
 import TweetsFlashback from "./TweetsFlashback";
-import { AccessTime, AttachMoney, Room } from "@material-ui/icons";
+import Photographers from "./Photographers";
+import { AccessTime, AttachMoney, CameraAlt } from "@material-ui/icons";
 import ReactGA from 'react-ga';
 
 export default class FlaskBack extends React.Component {
@@ -34,6 +35,9 @@ export default class FlaskBack extends React.Component {
             <a href="#twitter-page">
               <img src="/twitter-logo.png" width="18px"/>
             </a>
+            <a href="#photographers-page">
+              <CameraAlt fontSize="small" />
+            </a>
           </div> 
         
           <div className="countdown-page" id="countdown-page">
@@ -48,7 +52,10 @@ export default class FlaskBack extends React.Component {
           <div className="twitter-page" id="twitter-page">
             <TweetsFlashback />
           </div> 
-        
+
+          <div className="photographers-page" id="photographers-page">
+            <Photographers/>
+          </div>
         </div>
     );
   }
