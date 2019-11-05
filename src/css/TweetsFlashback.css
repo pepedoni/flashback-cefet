@@ -29,11 +29,27 @@
 }
 
 .intro{
+    font-size: 18px;
     text-align: center;
 }
 
 .btn-twitter{
     margin: 5px;
+}
+
+.promotion {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.promotion-contianer {
+    background-color: black;
+}
+.promotion-album {
+    padding: 5px;
 }
 
 @media(max-width: 550px){
