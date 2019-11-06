@@ -130,3 +130,13 @@ a:active {
 .MuiGrid-container {
   justify-content: center;
 }
+
+.promotion-page{
+  display: flex;
+  justify-content: center;
+}
+
+.twitter-page{
+  display: flex;
+  justify-content: center;
+}
