@@ -1,7 +1,9 @@
 import React from "react";
-import "../css/TweetsFlashback.css";
+import Grid from '@material-ui/core/Grid';
+import "../css/Promotions.scss";
+import { TwitterTweetEmbed, TwitterHashtagButton } from "react-twitter-embed";
 
-export default class TweetsFlashback extends React.Component {
+export default class Promotions extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,16 +21,36 @@ export default class TweetsFlashback extends React.Component {
 
     render() {
         return (
+
             <div className="content-flex">
-                <div className="resenhas">
-                    <div className="resenha radioactive" />
-                    <div className="resenha radioactive2" />
-                    <div className="resenha festt" />
-                    <div className="resenha sunrise" />
-                    <div className="resenha check-in"/>
-                    <div className="resenha check-out"/>
-                    <div className="resenha decreto" />
-                </div>
+                <p className="intro">Promoção</p>
+                <Grid container spacing={2} alignItems="center">
+                    <Grid item xs={12} md={6}>
+                        <div className='promotion-card'>
+                            <span>1 ingresso para o melhor flashback utilizando #MEUFLASHBACK <TwitterHashtagButton tag="MEUFLASHBACK" className="btn-twitter"/></span>
+                        </div>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <div className='promotion-card'>
+                            <span>1 ingresso sorteado entre os tweets com #FLASHBACKCEFET <TwitterHashtagButton tag="FLASHBACKCEFET" className="btn-twitter"/></span>
+                        </div>
+                    </Grid>
+                </Grid>
+                <p className="intro">Relembre suas historias com as fotos abaixo</p>
+                <Grid container alignItems="center">
+                    <Grid item xs={12} md={6}>
+                        <div className="resenha radioactive" />
+                        <div className="resenha radioactive2" />
+                        <div className="resenha festt" />
+                        <div className="resenha sunrise" />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <div className="resenha check-in"/>
+                        <div className="resenha check-out"/>
+                        <div className="resenha decreto" />
+                        <div className="resenha decreto" />
+                    </Grid>
+                </Grid>
                 <div className="content-imgs-promotion">
                     {/* <div className="imgs-promotion">
                         <img src="IMG_2310.jpg" alt="" width="200px" height="200px"/>
@@ -42,7 +64,6 @@ export default class TweetsFlashback extends React.Component {
                     <div className="imgs-promotion">
                         <img src="IMG_2310.jpg" alt="" width="200px" height="200px"/>
                     </div> */}
-                    <p className="intro"> Promoção pipipi popopo ganha um ingresso pipipi popopo</p>
                 </div>
             </div>
         );

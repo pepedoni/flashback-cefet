@@ -1,13 +1,7 @@
 import React from "react";
 import "../css/TweetsFlashback.css";
 import TweetJs from "../util/tweetjs";
-import Divider from '@material-ui/core/Divider';
 import { TwitterTweetEmbed, TwitterHashtagButton } from "react-twitter-embed";
-import { Grid } from "@material-ui/core";
-import Image from 'material-ui-image';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 
 export default class TweetsFlashback extends React.Component {
     constructor(props) {

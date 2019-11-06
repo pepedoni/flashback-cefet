@@ -1,0 +1,31 @@
+.promotion-page {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.content-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.promotion-card {
+    display: flex;
+    padding-left: 5px;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    flex-direction: column;
+    text-align: center;
+}
+@media(max-width: 550px){
+    
+    .content-imgs-promotion{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    
+}

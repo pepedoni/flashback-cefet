@@ -6,7 +6,7 @@ import Photographers from "./Photographers"
 import PricesCard from "./PricesCard";
 import TweetsFlashback from "./TweetsFlashback";
 import Promotions from "./Promotions";
-import { AccessTime, AttachMoney, CameraAlt } from "@material-ui/icons";
+import { AccessTime, AttachMoney, CameraAlt, LocalOffer } from "@material-ui/icons";
 import ReactGA from 'react-ga';
 
 export default class FlaskBack extends React.Component {
@@ -33,12 +33,17 @@ export default class FlaskBack extends React.Component {
             <a href="#prices-page">
               <AttachMoney fontSize="small" />
             </a>
+            
+            <a href="#promotion-page">
+              <LocalOffer fontSize="small" />
+            </a>
+            
             <a href="#twitter-page">
               <img src="/twitter-logo.png" width="18px"/>
             </a>
-            <a href="#photographer-page">
+            {/*<a href="#promotion-page">
               <CameraAlt fontSize="small" />
-            </a>
+            </a>*/}
           </div> 
         
           <div className="countdown-page" id="countdown-page">
