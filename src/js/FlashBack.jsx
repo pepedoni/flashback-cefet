@@ -5,6 +5,7 @@ import PartyMap from "./PartyMap";
 import Photographers from "./Photographers"
 import PricesCard from "./PricesCard";
 import TweetsFlashback from "./TweetsFlashback";
+import Promotions from "./Promotions";
 import { AccessTime, AttachMoney, CameraAlt } from "@material-ui/icons";
 import ReactGA from 'react-ga';
 
@@ -49,13 +50,17 @@ export default class FlaskBack extends React.Component {
             <PricesCard />
           </div> 
 
+          <div className="promotion-page" id="promotion-page">
+            <Promotions />
+          </div>
+
           <div className="twitter-page" id="twitter-page">
             <TweetsFlashback />
           </div> 
 
-          <div className="photographer-page" id="photographer-page">
+          {/* <div className="photographer-page" id="photographer-page">
             <Photographers />
-          </div> 
+          </div>  */}
         
         </div>
     );

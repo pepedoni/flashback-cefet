@@ -31,6 +31,7 @@
 .intro{
     font-size: 18px;
     text-align: center;
+    padding: 5px;
 }
 
 
@@ -53,8 +54,70 @@
     padding: 5px;
 }
 
+.content-imgs-promotion{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    max-width: 450px;
+}
+
+
+.imgs-promotion{
+    margin: 8px;
+}
+
+.resenhas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 500px;
+    padding: 65px;
+    margin: 10px;
+}
+
+.resenha{
+    width: 460px;
+    height: 70px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.content-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @media(max-width: 550px){
     .tweets {
         width: 340px !important;
-   }
+    }
+
+    .content-flex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .content-imgs-promotion{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .resenha{
+        background-image: url("/public/radioactive.jpg");
+        width: 70vw;
+        height: 10vh;
+    }
+
+    .resenhas{
+        padding: 20px;
+    }
+    
 }
