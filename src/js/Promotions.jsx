@@ -21,14 +21,13 @@ export default class TweetsFlashback extends React.Component {
         return (
             <div className="content-flex">
                 <div className="resenhas">
-                    <div className="resenha"></div>
-                    {/* <img className="resenha" src="radioactive.jpg" alt=""/>
-                    <img className="resenha" src="radioactive2.jpeg" alt=""/>
-                    <img className="resenha" src="festt.jpg" alt=""/>
-                    <img className="resenha" src="sunrise.jpg" alt=""/>
-                    <img className="resenha" src="check-in.jpg" alt=""/>
-                    <img className="resenha" src="check-out.jpg" alt=""/>
-                    <img className="resenha" src="decreto.jpg" alt=""/> */}
+                    <div className="resenha radioactive" />
+                    <div className="resenha radioactive2" />
+                    <div className="resenha festt" />
+                    <div className="resenha sunrise" />
+                    <div className="resenha check-in"/>
+                    <div className="resenha check-out"/>
+                    <div className="resenha decreto" />
                 </div>
                 <div className="content-imgs-promotion">
                     {/* <div className="imgs-promotion">
