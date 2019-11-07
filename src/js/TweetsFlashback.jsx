@@ -7,15 +7,17 @@ export default class TweetsFlashback extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tweetsFlashback: []
+            tweetsFlashback: [],
+            tweetsFlashbackSecondTag: [],
         };
     }
 
     componentWillMount() {
-        this.getTweetsByHashtag();
+        this.getTweetsByHashtagFLASHBACKCEFET();
+        this.getTweetsByHashtagMEUFLASHBACK();
     }
 
-    getTweetsByHashtag() {
+    getTweetsByHashtagFLASHBACKCEFET() {
         TweetJs.Search("#FLASHBACKCEFET", tweets=> {
             const filteredTweets = tweets.statuses.filter(tweet=>{
                 return !tweet.hasOwnProperty("retweeted_status");
@@ -26,12 +28,15 @@ export default class TweetsFlashback extends React.Component {
         });
     }
 
-    openAlbum(album) {
-        switch(album) {
-            case 1:
-                window.open("https://photos.google.com/u/1/share/AF1QipOAfeGBcdXSgPLKmFxRKQGVpH4TCOE9PI8Fe7C5H2RNbNjvT7PO6GVMZaZvSCQ5Og?key=aUNKNVJpMVVjZTlRS3Q1eDJnNDYtZUhvVFhkSVRn", "_blank");
-                break;
-        }
+    getTweetsByHashtagMEUFLASHBACK() {
+        TweetJs.Search("#MEUFLASHBACK", tweets=> {
+            const filteredTweetsSecondTag = tweets.statuses.filter(tweet=>{
+                return !tweet.hasOwnProperty("retweeted_status");
+            });
+            this.setState({
+                tweetsFlashbackSecondTag: filteredTweetsSecondTag
+            });
+        });
     }
 
     render() {
@@ -42,11 +47,13 @@ export default class TweetsFlashback extends React.Component {
                     <TwitterHashtagButton tag="FLASHBACKCEFET" className="btn-twitter"/>
                     <div className="tweets">
                         {
-                            this.state.tweetsFlashback.map( tweet => 
-                                <TwitterTweetEmbed
-                                    key={tweet.id}  
-                                    tweetId={tweet.id_str}
-                                /> 
+                            this.state.tweetsFlashback
+                                .concat(this.state.tweetsFlashbackSecondTag)
+                                .map( tweet => 
+                                    <TwitterTweetEmbed
+                                        key={tweet.id}  
+                                        tweetId={tweet.id_str}
+                                    /> 
                             )
                         }
                     </div>
