@@ -1,60 +1,62 @@
 .tweets {
-	 max-height: 500px;
-	 overflow-y: auto;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.tweets > div {
+  margin-left: 6px;
 }
 
 .content-tweets {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
 }
 
 .down {
-    transform: rotate(-90deg);
-    width: 20px;
-    padding: 5px;
+  transform: rotate(-90deg);
+  width: 20px;
+  padding: 5px;
 }
 
 .EmbeddedTweet .EmbeddedTweet--cta .js-clickToOpenTarget {
-    background-color: rgb(21, 32, 43) !important;
-    color: #fff !important;
-    border-color: rgb(53, 72, 90) !important;
-	
+  background-color: rgb(21, 32, 43) !important;
+  color: #fff !important;
+  border-color: rgb(53, 72, 90) !important;
 }
 
 .CallToAction {
-    border-color: rgb(53, 72, 90) !important;
+  border-color: rgb(53, 72, 90) !important;
 }
 
-.intro{
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
+.intro {
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
 }
 
-
-.btn-twitter{
-    margin: 5px;
+.btn-twitter {
+  margin: 5px;
 }
 
-.content-flex{
+.content-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 550px) {
+  .tweets {
+    width: 340px !important;
+  }
+
+  .content-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
-}
-
-@media(max-width: 550px){
-    .tweets {
-        width: 340px !important;
-    }
-
-    .content-flex{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column;
-    }
+  }
 }
