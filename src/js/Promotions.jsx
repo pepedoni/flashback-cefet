@@ -62,6 +62,18 @@ export default class Promotions extends React.Component {
           "_blank"
         );
         break;
+      case "rdcfestfinal":
+          window.open(
+            "https://photos.google.com/share/AF1QipM-Mj4O3TrCxsB4_0HDM3g-y74LSm5mRNyNMGesCVG-HJRJhMZnKnnvthxZ3CC_zA?key=cGc1NElfVEdpOXB1Z0pvZ3ZxLXdnOVBfamdFWXZR",
+            "_blank"
+          );
+          break;
+      case "rdcfestreview":
+        window.open(
+          "https://photos.google.com/share/AF1QipO9UFYPT4d0lrwommndh4ufvAq2E6uqsyeJmd33yfcMKQQvn8kZNs2tq_1heXYPWQ?key=WEFYYmszZmgtUm93a1JyZ3Fad2FaS3Y5UXlFQmRn",
+          "_blank"
+        );
+        break;
       default:
         break;
     }
@@ -99,7 +111,7 @@ export default class Promotions extends React.Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Regulamento
+              Clique aqui para ver o Regulamento
           </a>
         </Grid>
         <p className="intro">Relembre suas historias</p>
@@ -112,20 +124,24 @@ export default class Promotions extends React.Component {
             className="left-col"
           >
             <div
+              onClick={() => this.openGalery("rdcfestfinal")}
+              className="resenha rdcfestfinal"
+            />
+            <div
+              onClick={() => this.openGalery("check-in")}
+              className="resenha check-in"
+            />
+            <div
               onClick={() => this.openGalery("radioactive")}
               className="resenha radioactive"
             />
             <div
-              onClick={() => this.openGalery("primeira-bateria")}
-              className="resenha primeira-bateria"
+              onClick={() => this.openGalery("sunrise")}
+              className="resenha sunrise"
             />
             <div
               onClick={() => this.openGalery("festt")}
               className="resenha festt"
-            />
-            <div
-              onClick={() => this.openGalery("sunrise")}
-              className="resenha sunrise"
             />
           </Grid>
           <Grid
@@ -136,12 +152,16 @@ export default class Promotions extends React.Component {
             className="right-col"
           >
             <div
-              onClick={() => this.openGalery("check-in")}
-              className="resenha check-in"
+              onClick={() => this.openGalery("rdcfestreview")}
+              className="resenha rdcfestreview"
             />
             <div
               onClick={() => this.openGalery("check-out")}
               className="resenha check-out"
+            />
+            <div
+              onClick={() => this.openGalery("primeira-bateria")}
+              className="resenha primeira-bateria"
             />
             <div
               onClick={() => this.openGalery("sunset")}
