@@ -75,9 +75,9 @@ export default class Promotions extends React.Component {
           <Grid item xs={12} md={6}>
             <div className="promotion-card">
               <span>
-                1 ingresso para o melhor flashback utilizando #MEUFLASHBACK{" "}
+                1 ingresso para o melhor flashback utilizando #FLASHBACKCEFET{" "}
                 <TwitterHashtagButton
-                  tag="MEUFLASHBACK"
+                  tag="FLASHBACKCEFET"
                   className="btn-twitter"
                 />
               </span>
@@ -94,6 +94,13 @@ export default class Promotions extends React.Component {
               </span>
             </div>
           </Grid>
+          <a
+              href="./promocao.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Regulamento
+          </a>
         </Grid>
         <p className="intro">Relembre suas historias</p>
         <Grid container alignItems="center" className="content-resenhas">
