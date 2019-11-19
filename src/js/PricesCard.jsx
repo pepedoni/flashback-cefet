@@ -24,6 +24,12 @@ const tiers = [
   {
     title: "4° Lote",
     value: "50",
+    sold_out: true,
+    selling: false
+  },
+  {
+    title: "5° Lote",
+    value: "55",
     sold_out: false,
     selling: true
   }
@@ -127,7 +133,7 @@ export default class PricesCard extends React.Component {
             <Grid item xs={12} md={12} className="prices-tiers">
               <Grid container spacing={2} style={{ padding: "0 12px" }}>
                 {tiers.map((tier, i) => (
-                  <Grid item xs={12} md={3} key={i}>
+                  <Grid item xs={12} md={4} key={i}>
                     <a
                       href="https://www.sympla.com.br/flashback-cefet__697366"
                       target="_blank"
