@@ -65,6 +65,7 @@ export default class CountDown extends React.Component {
     return (
       <div className="countdown-container">
         <div className="countdown-header">
+          {/*
           <span className="seller-contact">
             <a
               href="https://www.sympla.com.br/flashback-cefet__697366"
@@ -74,6 +75,7 @@ export default class CountDown extends React.Component {
               <img src="/sympla-logo.png" alt="Whats app" /> Compre pelo Sympla
             </a>
           </span>
+          */}
           <a
             href="https://open.spotify.com/playlist/6hNp3o2BPT7coXmf7tdN0W?si=R0mLtMn-S5aLnBzBOF3YMA"
             target="_blank"
@@ -97,13 +99,13 @@ export default class CountDown extends React.Component {
         </div>
  
         <div className="text-agradecimento">
-          <p>Obrigado a todos que compareceram!</p>
+          <p>Obrigado a todos que compareceram</p>
           <p>Fotos em breve</p>
         </div>
         <div className="countdown-footer">
           <a href="#prices-page">
-            <img src="/arrow.png" alt="Flashback CEFET arrow-down" />
-            <span>mais informações</span>
+            {/*<img src="/arrow.png" alt="Flashback CEFET arrow-down" />
+            <span>mais informações</span>*/}
             <span>
             <a href="https://www.youtube.com/watch?v=_snpkt5AAbs&t=" target="_blank">
               <span
