@@ -27,7 +27,7 @@ export default class CountDown extends React.Component {
 
   calculateRemainingTime() {
     let remainingTime = {};
-    const partyDate = moment("2019-11-30T17:00:00-03:00");
+    const partyDate = moment("2020-06-07T17:00:00-03:00");
     const currentDate = moment();
     const diffTime = moment.duration(partyDate - currentDate, "milliseconds");
 
@@ -94,6 +94,11 @@ export default class CountDown extends React.Component {
           {this.renderItem(this.state.remainingTime.hours, "Horas")}
           {this.renderItem(this.state.remainingTime.minutes, "Minutos")}
           {this.renderItem(this.state.remainingTime.seconds, "Segundos")}
+        </div>
+ 
+        <div className="text-agradecimento">
+          <p>Obrigado a todos que compareceram!</p>
+          <p>Fotos em breve</p>
         </div>
         <div className="countdown-footer">
           <a href="#prices-page">

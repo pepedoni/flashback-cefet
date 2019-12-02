@@ -106,13 +106,6 @@ export default class Promotions extends React.Component {
               </span>
             </div>
           </Grid>
-          <a
-              href="./promocao.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Clique aqui para ver o Regulamento
-          </a>
         </Grid>
         <p className="intro">Relembre suas historias</p>
         <Grid container alignItems="center" className="content-resenhas">

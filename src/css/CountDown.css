@@ -26,6 +26,15 @@ span.label {
     background-color: black;
 }
 
+.prices-header {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: center;
+    padding: 12px;
+    font-size: 24px;
+}
+
 @media (max-width: 1000px){
     .countdown-time {
         font-size: 40px;

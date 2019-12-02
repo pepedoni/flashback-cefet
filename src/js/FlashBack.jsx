@@ -30,17 +30,19 @@ export default class FlaskBack extends React.Component {
             <a href="#countdown-page">
               <AccessTime fontSize="small" />
             </a>
-            <a href="#prices-page">
+            {/*<a href="#prices-page">
               <AttachMoney fontSize="small" />
-            </a>
-            
-            <a href="#promotion-page">
-              <LocalOffer fontSize="small" />
-            </a>
+    </a>*/}
             
             <a href="#twitter-page">
               <img src="/twitter-logo.png" width="18px"/>
             </a>
+
+            <a href="#promotion-page">
+              <LocalOffer fontSize="small" />
+            </a>
+            
+
             {/*<a href="#promotion-page">
               <CameraAlt fontSize="small" />
             </a>*/}
@@ -48,20 +50,24 @@ export default class FlaskBack extends React.Component {
         
           <div className="countdown-page" id="countdown-page">
             <CountDown />
+
           </div>
         
         
-          <div className="prices-page" id="prices-page">
-            <PricesCard />
+          {/* <div className="prices-page" id="prices-page">
+              <PricesCard />
+          </div> */}
+
+          
+          <div className="twitter-page" id="twitter-page">
+            <TweetsFlashback />
           </div> 
 
           <div className="promotion-page" id="promotion-page">
             <Promotions />
           </div>
 
-          <div className="twitter-page" id="twitter-page">
-            <TweetsFlashback />
-          </div> 
+
 
           {/* <div className="photographer-page" id="photographer-page">
             <Photographers />
